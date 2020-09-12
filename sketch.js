@@ -15,7 +15,7 @@ function preload()
 }
 
  function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 
 
 	engine = Engine.create();
@@ -24,10 +24,10 @@ function preload()
  	//Create the Bodies Here.
 
 
-	ground=new Ground(600,height-10,1200,10);
-	dustbinL=new Dustbin(490,610,20,100);
-	dustbinM=new Dustbin(600,660,200,20);
-	dustbinR=new Dustbin(710,610,20,100);
+	ground=new Ground(800,height-10,1600,10);
+	dustbinL=new Dustbin(1290,610,20,100);
+	dustbinM=new Dustbin(1400,660,200,20);
+	dustbinR=new Dustbin(1510,610,20,100);
 	paper=new PAPER(50,600,15);
 	Engine.run(engine);
 
@@ -63,7 +63,15 @@ function preload()
 	// {
 	// 	;
 	// }
-	paper.keyPressed();
+	
     drawSprites();
  
 }
+ function keyPressed(){
+     if(keyCode===UP_ARROW){
+           Body.applyForce(paper.body,paper.body.position,{x:60,y:-60});
+		//    Body.setAngle(paper.body,PI/4);
+		  // return true;
+        }
+		//return false;
+    }   

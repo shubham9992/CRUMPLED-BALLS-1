@@ -17,13 +17,6 @@ class PAPER {
        ellipse(this.body.position.x,this.body.position.y,this.radius,this.radius);
     }
 
-     keyPressed(){
-     if(keyCode===UP_ARROW){
-           Body.applyForce(this.body,this.body.position,{x:4,y:-4});
-		//    Body.setAngle(paper.body,PI/4);
-		  // return true;
-        }
-		//return false;
-    }   
+    
     
 };
